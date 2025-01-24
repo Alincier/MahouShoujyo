@@ -170,7 +170,7 @@ namespace MahouShoujyo
         }
         private void On_NPC_SpawnNPC(On_NPC.orig_SpawnNPC orig)
         {
-            if (TimeStopSystem.TimeStopping) return;
+            //if (TimeStopSystem.TimeStopping) return;
             orig();
         }
         private void On_Dust_UpdateDust(On_Dust.orig_UpdateDust orig)
@@ -194,6 +194,7 @@ namespace MahouShoujyo
                     if (self.immune[i]>0) self.immune[i]--;
                     else self.immune[i] = 0;
                 }
+                self.CheckActive();
                 return;
             }
             if (self.active) orig(self,i);

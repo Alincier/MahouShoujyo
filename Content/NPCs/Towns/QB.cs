@@ -18,6 +18,7 @@ using Terraria.Utilities;
 using MahouShoujyo.Content.Items.SpecialWeapon;
 using MahouShoujyo.Common.Configs;
 using System.Runtime.Intrinsics.Arm;
+using MahouShoujyo.Content.Items.Placeable;
 
 namespace MahouShoujyo.Content.NPCs.Towns
 { 
@@ -261,6 +262,14 @@ namespace MahouShoujyo.Content.NPCs.Towns
             .Add<Items.soulGem>()
             .Add<PieceofGrief>()
             .Add<GriefSeed>(Condition.BloodMoon)
+            .Add<MusicBox_Connect>()
+            .Add<MusicBox_Mataashita>()
+            .Add<MusicBox_AndImHome>()
+            .Add<MusicBox_Magia>()
+            .Add<MusicBox_Decretum>()
+            .Add<MusicBox_SisPuellaMagica>()
+            .Add<MusicBox_Naturally>()
+            .Add<MusicBox_CredensJustitiam>()
             .Add<Firstbow>(Condition.Hardmode, enableshop)
             .Add<TimePlate>(Condition.Hardmode, enableshop)
             .Add<ColorFive>(Condition.Hardmode, enableshop)
