@@ -128,8 +128,6 @@ namespace MahouShoujyo.Content.Projectiles
             }
             Projectile.width = 96*scale; // The width of projectile hitbox
             Projectile.height = 160*scale; // The height of projectile hitbox
-            // Main.NewText(player.channel);
-            // Main.NewText(Projectile.ai[0]);
             if (Projectile.ai[0] == 0)
             {
                 if (player.direction>=0) { direction =0; }// Projectile.rotation = Projectile.velocity.ToRotation(); }
@@ -163,7 +161,6 @@ namespace MahouShoujyo.Content.Projectiles
                 Projectile.damage = (int)(damage*2*damage_bonus);
             }
 
-            //Main.NewText(length);
             Projectile.ai[0]++;
             for (int i = frame_tail -1; i>0; i--)
             {
@@ -246,8 +243,6 @@ namespace MahouShoujyo.Content.Projectiles
         }
         public override void Kill(int timeLeft)
         {
-            //停止声音
-            //Main.NewText(damage_bonus);
 
         }
     }

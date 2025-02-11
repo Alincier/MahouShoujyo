@@ -32,9 +32,9 @@ Items: {
 		Tooltip:
 			'''
 			某人使用的弓，弓身是伸展开的枝条，两端装点着花朵。
-			能以半数魔力射出粉色的箭矢，消耗魔力越多，伤害越高；射击后需要短暂的歇息。
+			能以半数魔力射出粉色的箭矢，消耗魔力越多，伤害越高。
 			有庞大魔力的话，甚至能改变“规则”。
-			“听说单击右键就能用它来释放广域魔法。嗯……我是说，它应当能，对吧？”
+			“右键点击可消耗至少300点魔力发动广域魔法。话说，永不耗尽魔力的魔法武器棒极了，不是吗？”
 			'''
 		MagicGirlTips: 只有魔法少女能发挥出全部力量
 	}
@@ -286,6 +286,22 @@ Items: {
 		DisplayName: 八音盒(Sis puella magica!)
 		Tooltip: ""
 	}
+
+	RedSpear: {
+		DisplayName: 分离之枪
+		Tooltip:
+			'''
+			按↓键可以在四周召唤逐渐扩散的锁链，每次扩散都会消耗魔力；松手将锁链释放。当场上存在长枪时，锁链会以长枪为中心。
+			长枪未投出时：
+			*左键长按会旋转长枪，满速后长枪会充能，在充能时松手，长枪会脱手投出。
+			*按↑+左键可以抓住长枪蓄力，松开左键后，长枪会脱手投出。满蓄力时长枪也会充能。
+			投出的长枪击中敌怪后会插在敌怪身上，击中物块后会插在物块中。长枪最多在物块上停留十秒，在物块上不会消失。
+			右键可以回收长枪，并使敌怪受到插入期间的累计伤害。若长枪已充能，回收后再次旋转会立即进入满速状态。
+			“你不习惯带着累赘战斗吧，这是对的”
+			'''
+		MagicGirlTips: 只有魔法少女能发挥出全部力量
+		ManaInfo: 每次锁链扩散消耗{0}魔力
+	}
 }
 
 Projectiles: {
@@ -305,6 +321,9 @@ Projectiles: {
 	TimeMissile.DisplayName: 决绝之焰
 	// YellowGunBullet.DisplayName: Yellow Gun Bullet
 	// YellowGunLight.DisplayName: Yellow Gun Light
+	// RedSpearBullet.DisplayName: Red Spear Bullet
+	// RedSpearBend.DisplayName: Red Spear Bend
+	// RedSpearChainProj.DisplayName: Red Spear Chain Proj
 }
 
 NPCs: {

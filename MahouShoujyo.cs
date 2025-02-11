@@ -108,7 +108,6 @@ namespace MahouShoujyo
                 if (tech == "GrayScaleMajoConciousness")
                 {
                     float progress = degree;
-                    //Main.NewText(progress);
                     if (!Filters.Scene[tech].IsActive())
                         Filters.Scene.Activate(tech).GetShader().UseProgress(progress);
                     else

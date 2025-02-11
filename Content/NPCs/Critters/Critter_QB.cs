@@ -61,7 +61,6 @@ namespace MahouShoujyo.Content.NPCs.Critters
         
         public override bool CanChat()
         {
-            //Main.NewText(Item.NPCtoBanner(this.Type));
             return true;
         }
         public override string GetChat()
@@ -93,7 +92,6 @@ namespace MahouShoujyo.Content.NPCs.Critters
                     //soulGem thegem = (soulGem)Main.item[index].ModItem;//类型强制转换
                     //thegem.CanUseItem(player);
                     //player.AddBuff(ModContent.BuffType<MagicGirlPover>(),10);
-                    //Main.NewText(index);
                     //Main.item[index].ModItem.CanUseItem(player);
                 } 
             }

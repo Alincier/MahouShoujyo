@@ -1,13 +1,9 @@
 ﻿[h2]一个开发中的魔法少女小圆模组[/h2]
 [h3]近期更新:[/h3]
-【重要更新】
 精简了包体
-微调了渲染细节
-现在，在装备时停道具并设为不可见时，能正确使用快捷键了
-修复在时停状态会异常生成敌怪超出数量上限的问题
-增加了八个魔法少女小圆bgm的八音盒，并对部分声音素材进行换源
-野生丘比修改为5滴血（不会被追踪），但拥有巨额生命回复；不过，其在时停状态下会受到巨额伤害。野生丘比可以用普通虫网捕捉，在大锅处或者直接放生到岩浆里制成肋排。
-
+重写了武器原初之救济的代码，增强了低蓝量下的表现，削弱了高蓝量下的表现。现在释放圆环之理魔法阵只需要300蓝，并在物品上有更加明显的提示。
+新增了佐仓杏子的武器：分离之枪
+优化：现在合成的灵魂宝石上会有玩家的署名，不需要再使用一次来绑定宝石了。
 提示：由于底层设计问题，考虑后续对整个模组的流程进行设计和调整，将会添加新的敌怪和掉落途径，使各部分更加融洽。届时会重新发布一个新的重制版模组。该模组会预计还会有数次更新，并添加佐仓杏子的武器；趋于稳定后可能不再更新，而是更新重制版模组。新模组与旧模组数据不互通，建议届时开新档体验（当然，新模组出来还有些时日，可以放心添加该模组游玩）。
 
 [hr][/hr]
@@ -22,7 +18,8 @@
     [*]魔法手枪：五色，可以听歌（但是一开始可能卡一下？）的远程输出方式魔法武器。光之女皇后。
     [*]魔法剑：泪滴，狂野的近战输出方式魔法武器。猪鲨后。（已被重做）
     [*]一把发射导弹的军火武器（魔法伤害）：决绝之焰。世纪之花和机械三王后击败魔女获得。
-    [*]使用魔法枪支射击的武器：终曲。使用充能爆破枪（火星事件）合成（后续可能会调整配方）。
+    [*]使用魔法枪支射击的武器：终曲。使用充能爆破枪（火星事件）合成。
+    [*]可以穿刺敌人并召唤锁链的长枪：分离之枪。使用太阳石合成。
     [*]时停武器，在多人模式也可以时停！（如有bug欢迎反馈）掉落自魔女BOSS.
     [*]灵魂宝石，通过挑战BOSS成长。(魔法少女可以随时随地制作灵魂宝石而不消耗材料）
     [*]悲叹之种系列道具，可以净化灵魂宝石，甚至停止宝石的污染
@@ -36,7 +33,7 @@
 [/list]
 [b]正在学习mod并持续制作中（嗯嗯）如遇到奇怪的问题（尤其是多人模式），可以尝试重新进入世界，并欢迎留言告知作者修复
 
-[h2]A new mod of Puella Magi Madoka Magica(Mahoushoujyo Madoka)which keeps developing.[/h2]
+[h2]A new mod of Puella Magi Madoka Magica(MahouShoujyo Madoka)which keeps developing.[/h2]
 
 [hr][/hr]
 [h3]Contents: [/h3]
@@ -51,7 +48,8 @@
     [*]Magic Gun: Color Five, a ranged style magic weapon, which can play songs( But may got stuck for a second when loading a new song first time).Drop from Empress of Light.
     [*]Magic Sword: Tears, a wild melee style magic weapon.Drop from DukeFishron.(has been remade recently)
     [*]A weapon shooting missiles(magic damage):Fire Decisive.Drop from the majo boss after defeating Plantera and all mech bosses.
-    [*]Weapon shooting with magic guns:Finale.use Charged Blaster Cannon(Martian Madness event) to craft(may adjust later).
+    [*]Weapon shooting with magic guns:Finale.Use Charged Blaster Cannon(Martian Madness event) to craft.
+    [*]A spear that punctures enemies and summon chains:Spear Leaver.Use Sun Stone to craft.
     [*]Time stop weapon, also works in multiplayer(welcome review if there is bug)Drop from the majo boss.
     [*]Soul Gem, can grow by challenging bosses.(For magic girls it can be crafted anywhere anytime with no materials needed.)
     [*]Grief Seed series items, used for purifying soul gems, and even stop natural pollution increase.
@@ -63,5 +61,5 @@
     [*]Spawning, abilities and assets of Majo can be set in configs,as well as other details of the world.
 
 [/list]
-[b]new and keep learning and updating.( .^◡^.)If you meet any bugs (especially in multiplayer mode),it's a good idea to try re-entering the world, and remeber to review and I'll fix it.[quote=tModLoader MahouShoujyo]
+[b]New and keep learning and updating.( .^◡^.)If you meet any bugs (especially in multiplayer mode),it's a good idea to try re-entering the world, and remeber to review and I'll fix it.[quote=tModLoader MahouShoujyo]
 Developed By CierNya[/quote]

@@ -32,9 +32,9 @@ Items: {
 		Tooltip:
 			'''
 			The bow used by someone, which is made by an extended branch and decorated with flowers at both ends.
-			Shoot pink arrows with half of all mana. The more mana, the higher damage.A short rest is necessary after each shoot.
+			Shoot pink arrows with half of all mana. The more mana, the higher damage.
 			If there is immense amount of  mana, it can even change the "rule". 
-			"It's said that it can be used for wide-area magic with a right click..Emm... I mean,it should, right?".
+			"Right click to use wide-area magic with at least 300 mana. By the way,a magic weapon never out of mana is fantastic, isn't it?".
 			'''
 		MagicGirlTips: Only magic girls can unleash its full power
 	}
@@ -288,6 +288,22 @@ Items: {
 		DisplayName: Music Box(Sis puella magica!)
 		Tooltip: ""
 	}
+
+	RedSpear: {
+		DisplayName: Spear Leaver
+		Tooltip:
+			'''
+			Press [↓] to summon the spreading chains around. Each diffusion cost mana. Release the key to release the chains. The spear will be the center if it exists.
+			When the spear has not been thrown out:
+			* Long-press the left key to spin the spear. When it reaches full speed, the spear get charged. Releasing when charged throws the spear.
+			* Press [↑ + left key] to grip the spear for charging.  Releasing throws it, and the spear get full charged at maximum gripping time.
+			The spear will pierce enemies/tiles and stay on it.It stays for ten seconds on enemies and for infinite time on tiles.
+			Right-click retrieves the spear, dealing accumulated damage to impaled enemies.The spin instantly reach max speed when charged spears retrieved.
+			"You said you aren't used to fighting with burden - you're right."
+			'''
+		MagicGirlTips: Only magic girls can unleash its full power
+		ManaInfo: Each spread of chains cost {0} mana
+	}
 }
 
 Projectiles: {
@@ -307,6 +323,9 @@ Projectiles: {
 	TimeMissile.DisplayName: Fire Decisive
 	YellowGunBullet.DisplayName: Yellow Gun Bullet
 	YellowGunLight.DisplayName: Yellow Gun Light
+	RedSpearBullet.DisplayName: Red Spear Bullet
+	RedSpearBend.DisplayName: Red Spear Bend
+	RedSpearChainProj.DisplayName: Red Spear Chain Proj
 }
 
 NPCs: {

@@ -144,7 +144,7 @@ namespace MahouShoujyo.Content.NPCs.Towns
         {
             //所有可能出现的名字
             return new List<string>() {
-        "Ta**** U*",
+        "Tamaki Ui",
             };
         }
         //决定NPC会被哪座雕像传送
@@ -276,6 +276,7 @@ namespace MahouShoujyo.Content.NPCs.Towns
             .Add<BlueSword>(Condition.Hardmode, enableshop)
             .Add<RPGweapon>(Condition.Hardmode, enableshop)
             .Add<YellowGun>(Condition.Hardmode, enableshop)
+            .Add<RedSpear>(Condition.Hardmode, enableshop)
             .AllowFillingLastSlot()
             .Register();
             //在物品的SetDefault里面用Item.shopCustomPrice =Item.buyPrice(20, 0, 0, 0);设置价格
