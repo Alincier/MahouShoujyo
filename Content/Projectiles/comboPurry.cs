@@ -18,7 +18,6 @@ using System.Linq;
 using static MahouShoujyo.Content.Items.MeleeWeapon.BlueSword;
 using MahouShoujyo.Content.Items.MeleeWeapon;
 using MahouShoujyo.Content.Projectiles.Weapon;
-using MahouShoujyo.Globals;
 
 namespace MahouShoujyo.Content.Projectiles
 {
