@@ -1,8 +1,10 @@
 Commons: {
-	WitchNightBegin: 魔女之夜开始了!
-	WitchNightEnd: 魔女之夜结束了...
+	WitchHuntBegin: 魔女狩猎开始了!
+	WitchHuntEnd: 魔女狩猎结束了...
 	DespairDeath: "{0}在绝望中死去……"
 	LeftGemDeath: "{0}变成了一具空壳……"
+	GemUITips0: "灵魂状态: "
+	GemUITips1: "灵魂状态（已被救赎）: "
 }
 
 Items: {
@@ -304,6 +306,11 @@ Items: {
 		MagicGirlTips: 只有魔法少女能发挥出全部力量
 		ManaInfo: 每次锁链扩散消耗{0}魔力
 	}
+
+	DarkScissor: {
+		// DisplayName: Dark Scissor
+		// Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -326,6 +333,8 @@ Projectiles: {
 	// RedSpearBullet.DisplayName: Red Spear Bullet
 	// RedSpearBend.DisplayName: Red Spear Bend
 	// RedSpearChainProj.DisplayName: Red Spear Chain Proj
+	// AnthonyScissors.DisplayName: Anthony Scissors
+	// AnthonyScissorsFriendly.DisplayName: Anthony Scissors Friendly
 }
 
 NPCs: {
@@ -466,6 +475,8 @@ NPCs: {
 			'''
 		spawnInfo: 魔法少女因绝望而死时会生成；将灵魂宝石丢入微光中，会得到道具“绝望的灵魂”，使用绝望的灵魂召唤。
 	}
+
+	// Anthony.DisplayName: Anthony
 }
 
 Buffs: {
@@ -492,6 +503,11 @@ Biomes: {
 	ConsciousSky: {
 		DisplayName: Conscious Sky
 		TownNPCDialogueName: the Conscious Sky
+	}
+
+	WitchNightBiome: {
+		// DisplayName: Witch Hunt
+		// TownNPCDialogueName: Witch Hunt
 	}
 }
 

@@ -36,8 +36,6 @@ namespace MahouShoujyo.Common.Systems
     }
     public class WitchNightSystem : ModSystem
     {
-        public static float shaderDegree = 0;
-        public const float changeTime = 180;
         public static bool EventActive = false;
         public static float EventProgress = 0f;
         public static bool happenTryed = false;
@@ -76,13 +74,13 @@ namespace MahouShoujyo.Common.Systems
         }
         public static void TryBegin()
         {
-            // 当进入夜晚时，有20%概率发 生魔女之夜
+            // 当进入夜晚时，有100%概率发生魔女之夜
             if (!Main.dayTime  && !happenTryed)
             {
                 if (true)//Main.rand.NextBool(5))
                 {
                     EventActive = true;
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MahouShoujyo.Commons.WitchNightBegin"),  new Color(50, 255, 130));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MahouShoujyo.Commons.WitchHuntBegin"),  new Color(50, 255, 130));
                     NetMessage.TrySendData(MessageID.WorldData);
                 }
                 happenTryed = true;
@@ -96,7 +94,7 @@ namespace MahouShoujyo.Common.Systems
                 if (EventActive)
                 {
                     EventActive = false;
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MahouShoujyo.Commons.WitchNightEnd"), new Color(50, 255, 130));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Mods.MahouShoujyo.Commons.WitchHuntEnd"), new Color(50, 255, 130));
                     NetMessage.TrySendData(MessageID.WorldData);
                 }
                 if (happenTryed) happenTryed = false;
@@ -109,28 +107,9 @@ namespace MahouShoujyo.Common.Systems
             if (NPC.AnyNPCs(ModContent.NPCType<Majo_Consciousness>())) return;
 
         }
-        public static void DrawShader()
-        {
-            if (Main.netMode == NetmodeID.Server) return;
-            if (EventActive) shaderDegree++;
-            else shaderDegree--;
-            shaderDegree = Math.Clamp(shaderDegree, 0, changeTime);
-            if (shaderDegree > 0 && Main.netMode != NetmodeID.Server && (Main.LocalPlayer.ZoneOverworldHeight || Main.LocalPlayer.ZoneDirtLayerHeight || Main.LocalPlayer.ZoneSkyHeight))
-            {
-                Color color = new Color(120, 60, 180);// Color.DarkViolet;
-                Main.NewText(color);
-                MahouShoujyo.SceneShader("ColorScaleDynamic", shaderDegree / changeTime, factor: 2 , r0: color.R, r1 : color.G , r2 : color.B);
-
-            }
-            else 
-            {
-                MahouShoujyo.DelSceneShader("ColorScaleDynamic");
-            }
-        }
         public override void PostUpdateEverything()
         {
-            DrawShader();
-            base.PostUpdateEverything();
+            
         }
         public override void ClearWorld()
         {

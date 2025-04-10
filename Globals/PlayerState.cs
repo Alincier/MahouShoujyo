@@ -6,6 +6,11 @@ using Microsoft.Xna.Framework;
 using static MahouShoujyo.MahouShoujyo;
 using Terraria.GameInput;
 using MahouShoujyo.Content.Items.MeleeWeapon;
+using Terraria.GameContent.Events;
+using Terraria.ID;
+using MahouShoujyo.Content.Biomes;
+using MahouShoujyo.Common.Systems;
+using System.Security.Policy;
 namespace MahouShoujyo.Globals
 {
     public class PlayerState : ModPlayer
@@ -90,7 +95,7 @@ namespace MahouShoujyo.Globals
             //捕捉本地玩家的按键状态
             if (Main.LocalPlayer == Player)
             {
-                mouseRight = Main.mouseLeft || PlayerInput.Triggers.Current.MouseLeft;
+                mouseLeft = Main.mouseLeft || PlayerInput.Triggers.Current.MouseLeft;
                 mouseLeftRelease = wasHoldingLeft && !mouseLeft;
                 mouseRight = Main.mouseRight || PlayerInput.Triggers.Current.MouseRight;
                 mouseRightRelease = wasHoldingRight && !mouseRight;
@@ -149,7 +154,31 @@ namespace MahouShoujyo.Globals
             }
         }
 
-
-
+        #region CheckEvent
+        public static bool AnyEvents(Player player, bool checkBloodMoon = false , bool checkWitchNight = false)
+        {
+            if (Main.invasionType > InvasionID.None && Main.invasionProgressNearInvasion)
+                return true;
+            if (player.ZoneTowerStardust || player.ZoneTowerSolar || player.ZoneTowerVortex || player.ZoneTowerNebula)
+                return true;
+            if (DD2Event.Ongoing && player.ZoneOldOneArmy)
+                return true;
+            if ((player.ZoneOverworldHeight || player.ZoneSkyHeight) && (Main.eclipse || Main.pumpkinMoon || Main.snowMoon))
+                return true;
+            if ((player.ZoneOverworldHeight || player.ZoneSkyHeight) && Main.bloodMoon && checkBloodMoon)
+                return true;
+            if ((Main.LocalPlayer.ZoneDirtLayerHeight || Main.LocalPlayer.ZoneOverworldHeight || Main.LocalPlayer.ZoneSkyHeight) && WitchNightSystem.EventActive && checkWitchNight)
+                return true;
+            return false;
+        }
+        #endregion
+        #region Check ZoneWitchNight
+        public static bool ZoneWitchNight(Player player)
+        {
+            if ((Main.LocalPlayer.ZoneDirtLayerHeight || Main.LocalPlayer.ZoneOverworldHeight || Main.LocalPlayer.ZoneSkyHeight) && WitchNightSystem.EventActive)
+                return true;
+            return false;
+        }
+        #endregion
     }
 }

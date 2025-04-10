@@ -31,8 +31,12 @@
 	  <None Remove="Effects\ColorScale.fx" />
 	  <None Remove="effects\GaussianBlur.fx" />
 	  <None Remove="effects\ShockWave.fx" />
+	  <None Remove="Images\Misc\MaskTexture.png" />
 	  <None Remove="Localization\en-US_Mods.MahouShoujyo.Configs.hjson" />
 	  <None Remove="Localization\zh-Hans_Mods.MahouShoujyo.Configs.hjson" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Common\UI\Images\" />
 	</ItemGroup>
 
 </Project>

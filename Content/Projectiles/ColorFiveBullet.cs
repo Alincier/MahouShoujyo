@@ -1,23 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 using System;
-using Terraria.GameContent;
-using Terraria.GameContent.Drawing;
-using System.Threading;
+
 using Terraria.Audio;
-using Mono.Cecil;
-using MahouShoujyo.Content.Projectiles;
-using Terraria.Utilities;
-using Steamworks;
-using MahouShoujyo.Content.Projectiles.Weapon;
-using System.IO;
-using static Terraria.GameContent.Animations.IL_Actions.NPCs;
-using MahouShoujyo.Content.Items.RangedWeapon;
 
 namespace MahouShoujyo.Content.Projectiles
 {
@@ -183,7 +171,7 @@ namespace MahouShoujyo.Content.Projectiles
             Dust.NewDustDirect(target.Center, target.width, target.height, DustID.PortalBoltTrail);
             Projectile.damage =(int)Projectile.damage*1;
         }
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             for (int i = 0; i<5; i++)
             Dust.NewDustDirect(Projectile.Center, Projectile.width, Projectile.height, DustID.Electric);

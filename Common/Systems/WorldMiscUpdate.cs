@@ -14,7 +14,7 @@ namespace MahouShoujyo.Common.Systems
 
 
 
-            // 魔女之夜事件
+            #region WitchNight
             if (Main.dayTime)
             {
                 WitchNightSystem.TryEnd();
@@ -24,7 +24,7 @@ namespace MahouShoujyo.Common.Systems
                 WitchNightSystem.TryBegin();
             }
             WitchNightSystem.Update();
-
+            #endregion
 
 
         }

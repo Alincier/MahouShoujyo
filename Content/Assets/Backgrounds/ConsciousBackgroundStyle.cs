@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace MahouShoujyo.Backgrounds
+namespace MahouShoujyo.Content.Assets.Backgrounds
 {
     public class ConsciousBackgroundStyle : ModSurfaceBackgroundStyle
     {
@@ -43,7 +43,7 @@ namespace MahouShoujyo.Backgrounds
         {
             spriteBatch.End();
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.AnisotropicClamp, DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
-                int majoindex = NPC.FindFirstNPC(ModContent.NPCType<Majo_Consciousness>());
+            int majoindex = NPC.FindFirstNPC(ModContent.NPCType<Majo_Consciousness>());
             Majo_Consciousness majo;
             /*if (majoindex >= 0 && Main.npc[majoindex].active)
             {
@@ -66,11 +66,11 @@ namespace MahouShoujyo.Backgrounds
             Main.instance.LoadBackground(textureSlot);
 
             bgScale *= 2f;
-            float bgWidthScaled = (int)((float)Main.backgroundWidth[textureSlot] * bgScale);
+            float bgWidthScaled = (int)(Main.backgroundWidth[textureSlot] * bgScale);
 
             SkyManager.Instance.DrawToDepth(Main.spriteBatch, 1f / (float)bgParallax);
 
-            float bgStartX = (int)(-Math.IEEERemainder(Main.screenPosition.X * bgParallax, bgWidthScaled) - (bgWidthScaled / 2));
+            float bgStartX = (int)(-Math.IEEERemainder(Main.screenPosition.X * bgParallax, bgWidthScaled) - bgWidthScaled / 2);
             float bgTopY = -Main.screenPosition.Y / ((float)Main.worldSurface * 16.0f);//(int)((-Main.screenPosition.Y ) / (Main.worldSurface * 16.0) * a + b);
 
             if (Main.gameMenu)
@@ -110,39 +110,39 @@ namespace MahouShoujyo.Backgrounds
             return false;*/
             return false;
         }
-       // public override int ChooseFarTexture()
-       // {
+        // public override int ChooseFarTexture()
+        // {
 
-       // }
-/*        private static int SurfaceFrameCounter;
-        private static int SurfaceFrame;
-        public override int ChooseMiddleTexture()
-        {
-            if (++SurfaceFrameCounter > 12)
-            {
-                SurfaceFrame = (SurfaceFrame + 1) % 4;
-                SurfaceFrameCounter = 0;
-            }
-            switch (SurfaceFrame)
-            {
-                case 0:
-                    return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/ExampleBiomeSurfaceMid0");
-                case 1:
-                    return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/ExampleBiomeSurfaceMid1");
-                case 2:
-                    return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/ExampleBiomeSurfaceMid2");
-                case 3:
-                    return BackgroundTextureLoader.GetBackgroundSlot("ExampleMod/Assets/Textures/Backgrounds/ExampleBiomeSurfaceMid3"); // You can use the full path version of GetBackgroundSlot too
-                default:
-                    return -1;
-            }
-        }*/
+        // }
+        /*        private static int SurfaceFrameCounter;
+                private static int SurfaceFrame;
+                public override int ChooseMiddleTexture()
+                {
+                    if (++SurfaceFrameCounter > 12)
+                    {
+                        SurfaceFrame = (SurfaceFrame + 1) % 4;
+                        SurfaceFrameCounter = 0;
+                    }
+                    switch (SurfaceFrame)
+                    {
+                        case 0:
+                            return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/ExampleBiomeSurfaceMid0");
+                        case 1:
+                            return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/ExampleBiomeSurfaceMid1");
+                        case 2:
+                            return BackgroundTextureLoader.GetBackgroundSlot(Mod, "Assets/Textures/Backgrounds/ExampleBiomeSurfaceMid2");
+                        case 3:
+                            return BackgroundTextureLoader.GetBackgroundSlot("ExampleMod/Assets/Textures/Backgrounds/ExampleBiomeSurfaceMid3"); // You can use the full path version of GetBackgroundSlot too
+                        default:
+                            return -1;
+                    }
+                }*/
         public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b)
         {
             tex0 = BackgroundTextureLoader.GetBackgroundSlot(Mod, "Content/Assets/Backgrounds/ConsciousBackgroundStyle0");
             tex1 = BackgroundTextureLoader.GetBackgroundSlot(Mod, "Content/Assets/Backgrounds/ConsciousBackgroundStyle1");
-            a =7200; //4600f/ 25000f *Main.bottomWorld;
-            b = Main.LocalPlayer.Center.Y / Main.bottomWorld *25000-1200f / Main.bottomWorld *25000;
+            a = 7200; //4600f/ 25000f *Main.bottomWorld;
+            b = Main.LocalPlayer.Center.Y / Main.bottomWorld * 25000 - 1200f / Main.bottomWorld * 25000;
             int majoindex = NPC.FindFirstNPC(ModContent.NPCType<Majo_Consciousness>());
             scale = 1f;
             parallax = 0.05f;
@@ -150,7 +150,7 @@ namespace MahouShoujyo.Backgrounds
             if (majoindex >= 0 && Main.npc[majoindex].active)
             {
                 majo = (Majo_Consciousness)Main.npc[majoindex].ModNPC;
-                if (majo.getStage()>1) return tex1;
+                if (majo.getStage() > 1) return tex1;
             }
             return tex0;
         }
@@ -214,8 +214,8 @@ namespace MahouShoujyo.Backgrounds
 				);
 			}
 		}
-	}         */ 
-        
-         
+	}         */
+
+
     }
 }

@@ -10,15 +10,7 @@ using Terraria.ModLoader;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using ReLogic.Content;
-using MahouShoujyo.Common.Systems;
-using MahouShoujyo.Content.Projectiles;
-using MahouShoujyo.Content.Buffs;
-using Terraria.Chat;
-using Terraria.Localization;
-using MahouShoujyo.Content.NPCs.Critters;
-using XPT.Core.Audio.MP3Sharp.Decoding;
-using System.IO;
-using Humanizer;
+
 namespace MahouShoujyo
 {
     public struct Vertex : IVertexType
@@ -78,6 +70,7 @@ namespace MahouShoujyo
                 // This type of shader needs an additional parameter: float4 uShaderSpecificData;
                 GameShaders.Misc["NormalGray"] = new MiscShaderData(this.Assets.Request<Effect>("Effects/GrayScale"), "NormalGrayScale");
                 GameShaders.Misc["PixelHorizonGSMajoConciousness"] = new MiscShaderData(this.Assets.Request<Effect>("Effects/GaussianBlur"), "CustomPixelhorizonGS");
+                GameShaders.Misc["Mask"] = new MiscShaderData(this.Assets.Request<Effect>("Effects/Mask"), "PixelShaderMask").UseColor(Color.Pink);
                 //GameShaders.Misc["SmoothBackgroundMajoConciousness"] = new MiscShaderData(this.Assets.Request<Effect>("Effects/SmoothBackground"), "MajoConsciousnessShader");
                 //绘制效果记得加上参数：float4 uShaderSpecificData;
                 // To bind a screen shader, use this.

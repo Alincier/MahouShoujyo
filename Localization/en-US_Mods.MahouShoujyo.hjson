@@ -1,8 +1,10 @@
 Commons: {
-	WitchNightBegin: THE WITCH NIGHT HAS BEGAN!
-	WitchNightEnd: The Witch Night ends...
+	WitchHuntBegin: THE WITCH HUNT HAS BEGAN!
+	WitchHuntEnd: The Witch Hunt ends...
 	DespairDeath: "{0} has died in despair..."
 	LeftGemDeath: "{0} has become an empty shell..."
+	GemUITips0: "Soul State: "
+	GemUITips1: "Soul State(Relieved): "
 }
 
 Items: {
@@ -306,6 +308,11 @@ Items: {
 		MagicGirlTips: Only magic girls can unleash its full power
 		ManaInfo: Each spread of chains cost {0} mana
 	}
+
+	DarkScissor: {
+		DisplayName: Dark Scissor
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -328,6 +335,8 @@ Projectiles: {
 	RedSpearBullet.DisplayName: Red Spear Bullet
 	RedSpearBend.DisplayName: Red Spear Bend
 	RedSpearChainProj.DisplayName: Red Spear Chain Proj
+	AnthonyScissors.DisplayName: Anthony Scissors
+	AnthonyScissorsFriendly.DisplayName: Anthony Scissors Friendly
 }
 
 NPCs: {
@@ -477,6 +486,8 @@ NPCs: {
 			Change a soul gem into item "Despair Soul" with Shimmer, and use the item for BOSS spwaning.
 			'''
 	}
+
+	Anthony.DisplayName: Anthony
 }
 
 Buffs: {
@@ -503,6 +514,11 @@ Biomes: {
 	ConsciousSky: {
 		DisplayName: Conscious Sky
 		TownNPCDialogueName: the Conscious Sky
+	}
+
+	WitchNightBiome: {
+		DisplayName: Witch Hunt
+		TownNPCDialogueName: Witch Hunt
 	}
 }
 

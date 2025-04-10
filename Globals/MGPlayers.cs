@@ -17,6 +17,7 @@ using Microsoft.Xna.Framework;
 using MahouShoujyo.Common.Configs;
 using Terraria.Localization;
 using Humanizer;
+using Terraria.Map;
 
 namespace MahouShoujyo.Globals
 {
@@ -111,6 +112,18 @@ namespace MahouShoujyo.Globals
         public bool notInDespair()
         {
             return polluted_time < deadline * 60 * 60;
+        }
+        public int getPollution()
+        {
+            return polluted_time / 60;
+        }
+        public int getLimit()
+        {
+            return deadline * 60 ;
+        }
+        public float getPollutionPercent()
+        {
+            return (float)Math.Round((polluted_time/(deadline*3600f)), 2);
         }
         public override void PostUpdate()
         {
