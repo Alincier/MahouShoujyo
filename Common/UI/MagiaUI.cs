@@ -104,12 +104,12 @@ namespace MahouShoujyo.Common.UI
             Rectangle soulRect = new Rectangle((int)emo, (int)(PollutionDegree * useHeight), useWidth, useHeight);
             sb.End();
             GraphicsDevice gd = Main.graphics.GraphicsDevice;
-
+            //画内容物
             sb.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, GameShaders.Misc["Mask"].Shader, Main.UIScaleMatrix);
 
             //gd.Textures[0] = contentTex;
             gd.Textures[1] = maskTex;
-            GameShaders.Misc["Mask"].UseColor( Color.Red);
+            GameShaders.Misc["Mask"].UseColor( Color.Lerp(Color.Pink, Color.Purple, 0.5f)  );
             GameShaders.Misc["Mask"].Shader.Parameters["uScreenResolution"].SetValue(new Vector2(texWidth, texHeight));
             //GameShaders.Misc["Mask"].UseShaderSpecificData(new Vector4( Left.Pixels, Top.Pixels, maskTex.Width, maskTex.Height));
             GameShaders.Misc["Mask"].UseShaderSpecificData(new Vector4(emo, PollutionDegree * useHeight, useWidth, useHeight));
@@ -123,6 +123,7 @@ namespace MahouShoujyo.Common.UI
                  SpriteEffects.None, 0);
             //Main.NewText(GameShaders.Misc["Mask"]);*/
             sb.End();
+            //画外框
             sb.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone, null, Main.UIScaleMatrix);
             sb.Draw(
                 tex, new Vector2(Left.Pixels, Top.Pixels),
